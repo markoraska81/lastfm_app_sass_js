@@ -1,0 +1,64 @@
+// ====================== GENERAL STYLES ===================== //
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: set-text-color(#fff);
+  background-color: #f5f3f3;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-family: $railway;
+}
+
+// SECTION
+section {
+  padding: 3rem 0;
+}
+
+// CONTAINER
+.container {
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+// UL
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// LINK
+a {
+  text-decoration: none;
+  color: set-text-color(#fff);
+}
+
+// IMAGE
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  width: 50px;
+}
+
+// SPACING
+.spacing-top * + * {
+  margin-top: 1rem;
+}

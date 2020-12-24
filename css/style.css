@@ -1,0 +1,462 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: #35424a;
+  background-color: #f5f3f3;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-family: "Railway", sans-serif; }
+
+section {
+  padding: 3rem 0; }
+
+.container {
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #35424a; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block; }
+
+.logo {
+  width: 50px; }
+
+.spacing-top * + * {
+  margin-top: 1rem; }
+
+#header {
+  padding: 0.5rem 0;
+  background-color: #35424a;
+  border-bottom: solid 2px #ed1c24; }
+  #header h1 {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.15rem;
+    color: #fff; }
+    @media (min-width: 786px) {
+      #header h1 {
+        font-size: 1.5rem; } }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+
+form.search-form {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto; }
+  @media (min-width: 786px) {
+    form.search-form {
+      width: 65%; } }
+  @media (min-width: 1140px) {
+    form.search-form {
+      width: 40%; } }
+  form.search-form input[type="text"] {
+    width: 100%;
+    padding: 0 1rem;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    height: 1.95rem;
+    outline: none; }
+    @media (min-width: 786px) {
+      form.search-form input[type="text"] {
+        height: 2.5rem; } }
+    form.search-form input[type="text"]::placeholder {
+      color: #a5a4a4; }
+  form.search-form button {
+    background-color: red;
+    padding: 0.95rem 1.5rem;
+    border: solid 1px red;
+    color: #fff;
+    font-size: 1rem;
+    height: 2rem;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 786px) {
+      form.search-form button {
+        height: 2.5rem; } }
+  form.search-form i.fas.fa-search {
+    font-size: 1.2rem; }
+
+.output-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+  @media (min-width: 1140px) {
+    .output-info {
+      flex-direction: row; } }
+
+.output-banner {
+  padding-left: 1.5rem;
+  position: relative; }
+  .output-banner::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #cac8c8;
+    top: 0;
+    left: 0; }
+  @media (min-width: 1140px) {
+    .output-banner {
+      width: 50%; } }
+  .output-banner img {
+    height: 100%;
+    display: none; }
+    @media (min-width: 1140px) {
+      .output-banner img {
+        display: block; } }
+
+.output-body {
+  width: 100%; }
+  @media (min-width: 1140px) {
+    .output-body {
+      width: 50%; } }
+
+.output-heading {
+  display: none; }
+  .output-heading.open-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left; }
+    @media (min-width: 786px) {
+      .output-heading.open-heading {
+        flex-direction: row;
+        align-items: center; } }
+  .output-heading .output__title {
+    color: #35424a;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: "Roboto Slab", sans-serif; }
+  .output-heading .output__back {
+    cursor: pointer; }
+
+.output-body .artists__title {
+  font-size: 1.2rem;
+  border-bottom: solid 1px #fff;
+  padding-bottom: 0.5rem; }
+
+.artists-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 2rem; }
+  .artists-list.open-artists-list {
+    display: none; }
+  @media (min-width: 1140px) {
+    .artists-list {
+      margin-top: 0; } }
+
+.artist {
+  position: relative;
+  width: 50%;
+  border: solid 1px #fff;
+  overflow: hidden; }
+  @media (min-width: 600px) {
+    .artist {
+      width: 33.33%; } }
+  @media (min-width: 786px) {
+    .artist {
+      width: 25%; } }
+  @media (min-width: 1140px) {
+    .artist {
+      width: 139px;
+      height: 139px; } }
+  .artist img {
+    filter: opacity(0.85); }
+  .artist-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1em;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: inherit;
+    flex-direction: column;
+    background: linear-gradient(45deg, black, #0000005e); }
+    .artist-info .name__title {
+      text-transform: uppercase;
+      font-family: "Roboto Slab", sans-serif;
+      font-weight: bold;
+      font-size: 0.7rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      height: 45px;
+      color: #fff; }
+      .artist-info .name__title:hover {
+        text-decoration: underline; }
+    .artist-info .listeners {
+      text-transform: capitalize;
+      font-size: 0.7rem;
+      line-height: 1; }
+    .artist-info i#btn-heart {
+      position: absolute;
+      top: 10px;
+      right: 15px; }
+
+.btn-tabs {
+  display: none; }
+  .btn-tabs.open-tabs {
+    border-bottom: solid 1px #bebdbd;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem; }
+
+.btn-tab {
+  background-color: transparent;
+  color: #35424a;
+  border: none;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer; }
+  .btn-tab:hover {
+    border-bottom: solid 2px red; }
+  .btn-tab.active {
+    border-bottom: solid 2px red;
+    font-weight: bold; }
+
+.output-services {
+  width: 80rem;
+  max-width: 100%;
+  margin: 0 auto; }
+  .output-services.open-services {
+    display: none; }
+  .output-services .output__title {
+    color: #35424a;
+    font-size: 1.2rem;
+    border-bottom: solid 1px #bebdbd;
+    padding-bottom: 0.5rem; }
+    @media (min-width: 786px) {
+      .output-services .output__title {
+        font-size: 1.6rem; } }
+    @media (min-width: 1140px) {
+      .output-services .output__title {
+        font-size: 2rem; } }
+
+.tracks-services {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 2rem; }
+
+.track {
+  width: 49%;
+  position: relative;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1.5rem;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .track {
+      width: 32%; } }
+  @media (min-width: 786px) {
+    .track {
+      width: 24%; } }
+  @media (min-width: 1140px) {
+    .track {
+      width: 19%; } }
+  .track img {
+    width: 40%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.75rem auto;
+    filter: drop-shadow(0px 0px 1px tomato); }
+  .track .info-track {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #ebebeb; */
+    padding: 0.5rem; }
+  .track h4.track__title {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #af0e14;
+    height: 25px; }
+  .track h3.name-artist {
+    font-size: 1rem;
+    font-family: "Roboto Slab", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    height: 30px; }
+  .track p.desc-track {
+    line-height: 1;
+    font-size: 0.8rem; }
+
+.tracks-list {
+  display: none; }
+  .tracks-list.open-tracks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; }
+
+.artist-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0 0.5rem 1rem;
+  border-bottom: solid 0.1rem #cac8c8;
+  color: #35424a;
+  font-size: 0.9rem;
+  line-height: 1; }
+  .artist-track p.num {
+    width: 40px; }
+  .artist-track img {
+    width: 50px;
+    border: solid 1px #d3d2d2; }
+  .artist-track .info-track {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .artist-track .info-track .name-track {
+      text-transform: uppercase;
+      font-family: "Roboto Slab", sans-serif; }
+      .artist-track .info-track .name-track:hover {
+        text-decoration: underline; }
+
+.albums-list {
+  display: none; }
+  .albums-list.open-albums-list {
+    display: block; }
+
+.album {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: solid 1px #bebdbd;
+  padding: 0.5rem 0; }
+  .album img {
+    width: 40px; }
+  .album h4.name-album {
+    text-transform: uppercase;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 0.9rem; }
+    .album h4.name-album:hover {
+      text-decoration: underline; }
+
+#btn-heart .far {
+  cursor: pointer; }
+
+.fas.fa-heart {
+  color: #ed1c24;
+  cursor: pointer; }
+
+.pagination-container {
+  display: inline-block;
+  margin-top: 1rem; }
+  .pagination-container .btn-page,
+  .pagination-container .btn-prev,
+  .pagination-container .btn-next {
+    background-color: transparent;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+    .pagination-container .btn-page:hover:not(.active-page),
+    .pagination-container .btn-prev:hover:not(.active-page),
+    .pagination-container .btn-next:hover:not(.active-page) {
+      background-color: #ddd; }
+  .pagination-container .active-page {
+    background-color: #ed1c24;
+    color: #fff; }
+    .pagination-container .active-page:hover {
+      background-color: #af0e14; }
+
+footer {
+  background-color: #35424a;
+  padding: 1rem 0;
+  margin-top: auto;
+  border-top: solid 2px #ed1c24;
+  color: #fff; }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem; }
+  @media (min-width: 786px) {
+    .footer-container {
+      flex-direction: row; } }
+  .footer-container .network-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem; }
+    @media (min-width: 786px) {
+      .footer-container .network-box {
+        flex-direction: row;
+        margin-bottom: 0; } }
+    .footer-container .network-box .fas,
+    .footer-container .network-box .fab,
+    .footer-container .network-box .far {
+      font-size: 1.2rem;
+      transition: 0.8s;
+      color: #fff; }
+      @media (min-width: 786px) {
+        .footer-container .network-box .fas,
+        .footer-container .network-box .fab,
+        .footer-container .network-box .far {
+          font-size: 1.5rem; } }
+      .footer-container .network-box .fas:hover, .footer-container .network-box .fas:focus,
+      .footer-container .network-box .fab:hover,
+      .footer-container .network-box .fab:focus,
+      .footer-container .network-box .far:hover,
+      .footer-container .network-box .far:focus {
+        color: #ed1c24; }
+  .footer-container .copyright {
+    text-transform: uppercase;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 0.85rem; }
+
+/*# sourceMappingURL=style.css.map */

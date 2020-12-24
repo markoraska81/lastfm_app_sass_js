@@ -1,0 +1,53 @@
+// ===================== HEADER ==================== //
+footer {
+  background-color: #35424a;
+  padding: 1rem 0;
+  margin-top: auto;
+  border-top: solid 2px #ed1c24;
+  color: set-text-color($dark);
+}
+
+.footer-container {
+  @include flexBox(space-between, center, column);
+  gap: 0.5rem;
+
+  // MEDIA QUERY
+  @include md {
+    flex-direction: row;
+  }
+
+  .network-box {
+    @include flexBox(center, center, row);
+    gap: 2rem;
+
+    // MEDIA QUERY
+    @include md {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+
+    .fas,
+    .fab,
+    .far {
+      font-size: 1.2rem;
+      transition: 0.8s;
+      color: set-text-color($dark);
+
+      // MEDIA QUERY
+      @include md {
+        font-size: 1.5rem;
+      }
+
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+  }
+
+  .copyright {
+    text-transform: uppercase;
+    font-family: $robotoSlab;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,59 @@
+// ====================== CONFIG ===================== //
+// COLORS
+$red: #ed1c24;
+$green: green;
+$dark: #35424a;
+
+// SET TEXT COLORS
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $dark;
+  } @else {
+    @return #fff;
+  }
+}
+
+// FONT FAMILY
+$robotoSlab: "Roboto Slab", sans-serif;
+$railway: "Railway", sans-serif;
+
+// FLEX BOX
+@mixin flexBox($content, $align, $direction) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// MEDIA QUERY
+// DESKTOP
+@mixin xl($width: 1400px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+// LAPTOP
+@mixin lg($width: 1140px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+// TABLET
+@mixin md($width: 786px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// MOBILE
+@mixin sm($width: 600px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin exsm($width: 500px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

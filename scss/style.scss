@@ -1,0 +1,10 @@
+// ====================== BASE ===================== //
+@import "./base/config";
+@import "./base/generalStyle";
+
+// ====================== LAYOUT ===================== //
+@import "./layout/header";
+@import "./layout/search";
+@import "./layout/output";
+@import "./layout/pagination";
+@import "./layout/footer";

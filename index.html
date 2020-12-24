@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music FM app</title>
+ 
+		<!-- FAVICON -->
+		<link rel="icon" href="img/nav-logo.png">
+
+		<!-- FONT AWESOME -->
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;900&amp;family=Russo+One&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;800&amp;display=swap" rel="stylesheet">
+		<!-- MY CSS -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div class="container">
+            <nav class="navigation">
+                <a href="index.html" class="nav-brand">
+                    <img src="img/nav-logo.png" class="logo" alt="Logo">
+                </a>
+                <h1 class="nav-title">
+                    Last FM API
+                </h1>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SECTION SEARCH -->
+    <section id="search">
+        <div class="container">
+            <form action="" class="search-form">
+                <input type="text" placeholder="Enter the name of the artist" id="name">
+                <button type="submit" class="btn-search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- SECTION OUTPUT -->
+    <section id="output" class="output">
+        <div class="container">
+            <div class="output-services">
+                <h1 class="output__title">
+                    Top Tracks
+                </h1>
+                <div class="tracks-services">
+
+                </div>
+                <div class="pagination-container">
+                    
+                  </div>
+            </div>
+            <div class="output-display">
+                <div class="output-heading">
+                    <h1 class="output__title">
+                        Search result for "<span class="search-value"></span>"
+                    </h1>
+                    <!-- <h4 class="output__results">
+                        Search result: <span class="search-result"></span>
+                    </h4> -->
+                </div>
+                <div class="btn-tabs">
+                    <button class="btn-tab btn-artist active" data-id="artist">
+                        Artist
+                    </button>
+                    <button class="btn-tab btn-albums" data-id="albums">
+                        Albums
+                    </button>
+                    <button class="btn-tab btn-tracks" data-id="tracks">
+                        Tracks
+                    </button>
+                </div>
+                <div class="output-info">
+                    <div class="output-body">
+                        
+                        <div class="artists-list">
+                            
+                        </div>
+                        <div class="albums-list">
+                            
+                        </div>
+                        <div class="tracks-list">
+                            
+                        </div>
+                    </div>
+                    <aside class="output-banner">
+                       <img src="img/lastfm-bcg.jpg" alt="">
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="img/nav-logo.png" class="logo" alt="Logo">
+            </div>
+            <div class="network-box">
+                <a href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="copyright">
+                © <span id="date">2020</span>. Marko Milenkovic design.
+            </p>
+        </div>
+    </footer>
+
+    
+    <!-- MY JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

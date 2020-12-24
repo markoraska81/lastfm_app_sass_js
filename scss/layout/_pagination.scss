@@ -1,0 +1,31 @@
+// ===================== PAGINATION ================== //
+.pagination-container {
+  display: inline-block;
+  margin-top: 1rem;
+
+  .btn-page,
+  .btn-prev,
+  .btn-next {
+    background-color: transparent;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover:not(.active-page) {
+      background-color: #ddd;
+    }
+  }
+
+  .active-page {
+    background-color: $red;
+    color: set-text-color($dark);
+
+    &:hover {
+      background-color: darken($red, 15);
+    }
+  }
+}

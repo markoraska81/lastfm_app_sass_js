@@ -1,0 +1,20 @@
+// ===================== HEADER ==================== //
+#header {
+  padding: 0.5rem 0;
+  background-color: #35424a;
+  border-bottom: solid 2px #ed1c24;
+
+  h1 {
+    font-family: $robotoSlab;
+    font-size: 1.15rem;
+    color: set-text-color($dark);
+
+    @include md {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.navigation {
+  @include flexBox(space-between, center, row);
+}
